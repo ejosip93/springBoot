@@ -10,6 +10,7 @@ pipeline {
             steps {
                 script {
                     echo 'Pulling...' + env.BRANCH_NAME
+                    sh "SonarQubeScanner/bin/sonar-scanner"
                 }
             }
         }
