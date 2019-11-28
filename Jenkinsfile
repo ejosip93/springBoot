@@ -1,5 +1,7 @@
 pipeline {
-    agent { label 'java8' }
+    agent {
+        label 'master'
+    }
     environment {
         EMAIL_RECIPIENTS = 'josip.peric@decode.agency'
     }
