@@ -4,7 +4,11 @@ pipeline {
     }
     stages {
         stage('Build with unit testing') {
-            echo 'Pulling...' + env.BRANCH_NAME
+            steps {
+                script {
+                    echo 'Pulling...' + env.BRANCH_NAME
+                }
+            }
         }
     }
 }
