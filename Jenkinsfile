@@ -10,7 +10,8 @@ pipeline {
             steps {
                 script {
                     echo 'Pulling...' + env.BRANCH_NAME
-                    sh "SonarQubeScanner/bin/sonar-scanner"
+                    bat 'mvn clean install'
+                    bat "SonarQubeScanner/bin/sonar-scanner"
                 }
             }
         }
